@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>صفحه معرفی — نام شما یا شرکت</title>
+  <meta name="description" content="صفحه ساده معرفی با شماره تماس و لینک‌ها" />
+  <style>
+    /* === Reset & base === */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:980px;
+      --fg:#e6eef6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071226 0%, #07182a 100%);
+      color:var(--fg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    /* === Layout === */
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+      align-items:start;
+    }
+
+    /* mobile */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr; padding:18px}
+    }
+
+    /* left/main content */
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+      border-radius:14px;
+      padding:22px;
+      min-height:220px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    h1{margin:0;font-size:1.6rem;line-height:1.15}
+    p.lead{margin:0;color:var(--muted);font-size:0.98rem}
+
+    .features{
+      display:flex;
+      gap:12px;
+      margin-top:8px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      background:var(--glass);
+      padding:10px 12px;
+      border-radius:12px;
+      font-size:0.9rem;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    /* right / contact card */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      border-radius:var(--radius);
+      padding:18px;
+      border: 1px solid rgba(255,255,255,0.03);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      align-items:stretch;
+      min-width:0;
+    }
+    .contact-title{font-weight:600}
+    .phone{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:space-between;
+      background:rgba(255,255,255,0.02);
+      padding:10px;
+      border-radius:10px;
+      font-size:1.05rem;
+    }
+    .phone a{color:var(--fg); text-decoration:none; font-weight:600}
+    .btn {
+      border:0; padding:10px 12px; border-radius:10px; cursor:pointer;
+      background:linear-gradient(90deg,var(--accent), #7dd3fc);
+      color:#032; font-weight:700;
+      box-shadow: 0 6px 18px rgba(6,182,212,0.12);
+    }
+    .btn.secondary{
+      background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--fg); font-weight:600;
+    }
+
+    .links{
+      display:flex; flex-direction:column; gap:8px;
+    }
+    .link-item{
+      display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--fg);
+      background: rgba(255,255,255,0.015); padding:8px; border-radius:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .link-item small{color:var(--muted)}
+    .meta{font-size:0.85rem;color:var(--muted)}
+
+    footer{margin-top:12px;color:var(--muted);font-size:0.85rem;text-align:center}
+    /* little responsive tweaks */
+    @media (max-width:520px){
+      h1{font-size:1.3rem}
+      .phone{flex-direction:column;align-items:flex-start;gap:6px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="site-title">
+    <!-- LEFT / main -->
+    <section class="hero" aria-labelledby="site-title">
+      <div>
+        <h1 id="site-title">نام شما یا نام کسب‌وکار</h1>
+        <p class="lead">خوش آمدید! اینجا یک معرفی کوتاه قرار می‌گیرد. می‌توانید چند جمله دربارهٔ خود یا خدماتتان بنویسید تا بازدیدکننده سریع بداند چه کاری انجام می‌دهید.</p>
+      </div>
+
+      <div class="features" aria-hidden="false">
+        <span class="chip">خدمات: طراحی وب</span>
+        <span class="chip">مشاوره</span>
+        <span class="chip">پشتیبانی</span>
+        <span class="chip">نمونه‌کار</span>
+      </div>
+
+      <div style="margin-top:auto;color:var(--muted);font-size:0.95rem">
+        <strong>آدرس کوتاه یا لوگو:</strong>
+        <div class="meta">آدرس دفتر یا یک جملهٔ کوتاه که هویت شما را منتقل کند.</div>
+      </div>
+    </section>
+
+    <!-- RIGHT / contact -->
+    <aside class="card" aria-labelledby="contact-title">
+      <div>
+        <div class="contact-title" id="contact-title">تماس سریع</div>
+        <div class="meta">برای تماس و پیگیری سریع از گزینه‌های زیر استفاده کنید</div>
+      </div>
+
+      <!-- Phone -->
+      <div class="phone" role="group" aria-label="شماره تلفن">
+        <!-- Replace the phone number below with your real number -->
+        <div>
+          <div style="font-size:0.85rem;color:var(--muted)">شماره تلفن</div>
+          <a href="tel:+989120000000" id="phone-link">+98 912 000 0000</a>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btn" id="copy-phone">کپی</button>
+          <a class="btn secondary" href="https://wa.me/989120000000" target="_blank" rel="noopener">چت واتساپ</a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <div style="font-weight:600;margin-bottom:8px">لینک‌ها</div>
+        <div class="links">
+          <!-- Replace hrefs with your actual links -->
+          <a class="link-item" href="https://example.com" target="_blank" rel="noopener">
+            <div>
+              <div style="font-weight:700">وب‌سایت</div>
+              <small>example.com</small>
+            </div>
+          </a>
+
+          <a class="link-item" href="https://instagram.com/example" target="_blank" rel="noopener">
+            <div>
+              <div style="font-weight:700">اینستاگرام</div>
+              <small>@example</small>
+            </div>
+          </a>
+
+          <a class="link-item" href="https://linkedin.com/in/example" target="_blank" rel="noopener">
+            <div>
+              <div style="font-weight:700">لینکداین</div>
+              <small>linkedin.com/in/example</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        © <span id="year"></span> نام شما — <span class="meta">همیشه در دسترس</span>
+      </footer>
+    </aside>
+  </main>
+
+  <script>
+    // small interactive bits: copy phone + show year
+    (function(){
+      const copyBtn = document.getElementById('copy-phone');
+      const phoneLink = document.getElementById('phone-link');
+      const yearEl = document.getElementById('year');
+      yearEl.textContent = new Date().getFullYear();
+
+      copyBtn.addEventListener('click', async function(){
+        const phone = phoneLink.textContent.trim();
+        try{
+          await navigator.clipboard.writeText(phone);
+          copyBtn.textContent = 'کپی شد ✓';
+          setTimeout(()=> copyBtn.textContent = 'کپی', 2000);
+        }catch(e){
+          // fallback: select and prompt
+          const tmp = document.createElement('input');
+          tmp.value = phone;
+          document.body.appendChild(tmp);
+          tmp.select();
+          try{
+            document.execCommand('copy');
+            copyBtn.textContent = 'کپی شد ✓';
+            setTimeout(()=> copyBtn.textContent = 'کپی', 2000);
+          }catch(err){
+            alert('لطفاً شماره را دستی کپی کنید: ' + phone);
+          }
+          document.body.removeChild(tmp);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
