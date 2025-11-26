@@ -99,7 +99,7 @@
       <h1>داروخانه دکتر رضا تیموری</h1>
       <p class="subtitle">(داروخونت)</p>
 
-      <div class="section-title">شبکه‌های اجتماعی</div>
+      <div class="section-title">راه های ارتباطی</div>
 
       <!-- Instagram -->
       <a class="btn" href="https://instagram.com/daroukhonat" target="_blank">
@@ -119,7 +119,11 @@
         لوکیشن داروخانه
       </a>
 	  
-     
+        <!-- شماره ثابت (قابلیت کپی) -->
+    <div class="btn copy-btn" onclick="copyPhone()" id="phoneBtn">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/724/724664.png">
+      شماره تماس: <span id="phoneText">02833665051</span>
+    </div>
 
 
      
@@ -135,5 +139,22 @@
 
     </div>
   </div>
+  
+  <!-- کپی شماره -->
+<script>
+  function copyPhone(){
+    let number = document.getElementById("phoneText").innerText;
+    navigator.clipboard.writeText(number).then(() =>{
+      let btn = document.getElementById("phoneBtn");
+      btn.style.background = "#bde8c8";
+      btn.innerHTML = "✔ شماره کپی شد";
+      setTimeout(()=>{
+        btn.style.background = "#e2f4e6";
+        btn.innerHTML = "<img class='icon' src='https://cdn-icons-png.flaticon.com/512/724/724664.png'> شماره ثابت: <span id='phoneText'>"+number+"</span>";
+      },1700);
+    });
+  }
+</script>
+
 </body>
 </html>
