@@ -3,221 +3,137 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>داروخانه دکتر رضا تیموری</title>
+  <title>داروخانه دکتر تیموری</title>
+
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 
   <style>
-    /* === Base === */
-    body {
+    :root{
+      --bg:#f6fbf7;
+      --card:#ffffff;
+      --green:#7fa980;
+      --green-dark:#6d967a;
+      --muted:#7d8b81;
+      --radius:14px;
+      --shadow:0 6px 18px rgba(46,60,53,0.08);
+      font-family:"Vazirmatn",sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
       margin:0;
-      font-family: Tahoma, sans-serif;
-      background:linear-gradient(180deg,#071226 0%, #07182a 100%);
-      color:#e6eef6;
-      padding:24px;
+      background:var(--bg);
+      color:#15332a;
+    }
+    .wrap{
+      min-height:100vh;
       display:flex;
+      align-items:center;
       justify-content:center;
+      padding:24px;
     }
-
-    .container {
-      width:100%;
-      max-width:900px;
-      display:flex;
-      flex-direction:column;
-      gap:20px;
-    }
-
-    /* === Hero === */
-    .hero{
-      background:rgba(255,255,255,0.03);
-      padding:22px;
-      border-radius:14px;
-      min-height:100px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      border:1px solid rgba(255,255,255,0.04);
-	  text-align:center;
-    }
-
-    h1{
-      margin:0;
-      font-size:22px;
-      line-height:1.4;
-    }
-
-    p.lead{
-      margin:0;
-      color:#94a3b8;
-      font-size:14px;
-      line-height:1.9;
-    }
-
-    .features{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-
-    .chip{
-      background:rgba(255,255,255,0.05);
-      padding:7px 10px;
-      border-radius:10px;
-      font-size:13px;
-      color:#94a3b8;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    /* === Contact section (now single column) === */
     .card{
-      background:rgba(255,255,255,0.03);
-      padding:18px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.05);
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .contact-title{
-      font-size:16px;
-      font-weight:bold;
-    }
-
-    .meta{
-      font-size:13px;
-      color:#94a3b8;
-    }
-
-    .phone{
-      background:rgba(255,255,255,0.04);
-      padding:12px;
-      border-radius:12px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-
-    .phone a{
-      color:#e6eef6;
-      font-size:15px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .btn {
-      padding:8px 12px;
-      border-radius:10px;
-      border:0;
-      cursor:pointer;
-      background:linear-gradient(90deg,#06b6d4,#7dd3fc);
-      color:#032;
-      font-weight:bold;
-    }
-
-    .btn.secondary{
-      background:transparent;
-      border:1px solid rgba(255,255,255,0.15);
-      color:#e6eef6;
-    }
-
-    .links{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-
-    .link-item{
-      text-decoration:none;
-      padding:10px;
-      border-radius:10px;
-      background:rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.05);
-      color:#e6eef6;
-      display:flex;
-      flex-direction:column;
-      gap:3px;
-    }
-
-    footer{
-      margin-top:10px;
-      font-size:13px;
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:18px;
+      padding:28px 20px;
+      box-shadow:var(--shadow);
       text-align:center;
-      color:#94a3b8;
+    }
+
+    .logo{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      overflow:hidden;
+      margin:0 auto 12px;
+      background:#fff;
+      border:1px solid #e5e5e5;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .logo img{width:100%;height:auto;display:block}
+
+    h1{margin:8px 0 6px;font-size:20px;font-weight:700;}
+    p.subtitle{margin:0 0 18px;color:var(--muted);font-size:14px;}
+
+    .section-title{margin:10px 0 12px;font-weight:600;color:#475a50;}
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      background:var(--green);
+      padding:12px 14px;
+      border-radius:12px;
+      color:#fff;
+      text-decoration:none;
+      margin-bottom:12px;
+      transition:0.15s;
+    }
+    .btn:hover{background:var(--green-dark);}
+    .btn .icon{width:20px;height:20px;}
+
+    .site-link{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      background:var(--green);
+      color:#fff;
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      margin-top:8px;
     }
   </style>
 </head>
-
 <body>
-  <main class="container">
+  <div class="wrap">
+    <div class="card">
 
-    <!-- معرفی -->
-    <section class="hero">
-      <h1>داروخانه دکتر رضا تیموری (داروخونت)</h1>
-      <p class="lead">
-       از طرق راه های ارتباطی زیر با ما در تماس باشید
-      </p>
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="logo.png" alt="لوگوی داروخانه دکتر تیموری">
+      </div>
 
+      <h1>داروخانه دکتر رضا تیموری</h1>
+      <p class="subtitle">(داروخونت)</p>
 
-    </section>
+      <div class="section-title">شبکه‌های اجتماعی</div>
 
-    <!-- تماس سریع → زیر معرفی -->
-    <section class="card">
+      <!-- Instagram -->
+      <a class="btn" href="https://instagram.com/daroukhonat" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        اینستاگرام
+      </a>
+	  
+ <!-- WhatsApp -->
+      <a class="btn" href="https://wa.me/989380415731" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        واتس‌اپ
+      </a>
+	  
+	   <!-- Location -->
+      <a class="btn" href="https://maps.app.goo.gl/xKxucXa1nvnApAWo6" target="_blank">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+        لوکیشن داروخانه
+      </a>
+	  
      
 
-      <div>
-       
 
-        <div class="links">
-          <a class="link-item" href="https://Daroukhonat.ir" target="_blank">
-            <span style="font-weight:bold">وب‌سایت</span>
-            <small class="meta">Daroukhonat.ir</small>
-          </a>
+     
 
-          <a class="link-item" href="https://instagram.com/daroukhonat" target="_blank">
-            <span style="font-weight:bold">اینستاگرام</span>
-            <small class="meta">@daroukhonat</small>
-          </a>
+     
 
-          <a class="link-item" href="https://wa.me/989380415731" target="_blank">
-            <span style="font-weight:bold">واتساپ</span>
-            <small class="meta">00989380415731</small>
-          </a>
-		    <a class="link-item" href="https://maps.app.goo.gl/xKxucXa1nvnApAWo6" target="_blank">
-            <span style="font-weight:bold">لوکیشن</span>
-            <small class="meta">قزوین، میدان جانبازان</small>
-          </a>
-        </div>
-      </div>
+      <div class="section-title" style="margin-top:18px">سایت</div>
 
-     <div class="phone">
-        <div style="font-size:13px;color:#94a3b8">شماره تماس</div>
-        <a href="tel:02833665051" id="phone-link">02833665051</a>
+      <a class="site-link" href="https://daroukhonat.ir/" target="_blank">
+        <span>وبگاه رسمی</span>
+        <span>➤</span>
+      </a>
 
-        <div style="display:flex; gap:10px;">
-          <button id="copy-phone" class="btn">کپی</button>
-        
-        </div>
-      </div>
-
-      <footer>
-      
-      </footer>
-    </section>
-
-  </main>
-
-  <script>
-    // Copy phone
-    document.getElementById("copy-phone").onclick = function(){
-      const num = document.getElementById("phone-link").textContent.trim();
-      navigator.clipboard.writeText(num).then(()=>{
-        this.textContent = "کپی شد ✓";
-        setTimeout(()=> this.textContent = "کپی", 2000);
-      });
-    };
-
-    // Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+    </div>
+  </div>
 </body>
 </html>
